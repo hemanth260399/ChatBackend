@@ -9,13 +9,14 @@ import { chatsmodel } from './connection/chat.js';
 import { v4 } from 'uuid';
 import { singlechatsmodel } from './connection/singleChat.js';
 import { userLoginmodel } from './connection/userLogin.js';
-
+import dotenv from "dotenv"
+dotenv.config()
 const app = express();
 const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: pricess.env.FE_URL,
         methods: ['GET', 'POST'],
         credentials: true
     }
