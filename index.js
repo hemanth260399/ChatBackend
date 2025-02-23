@@ -16,7 +16,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: pricess.env.FE_URL,
+        origin: process.env.FE_URL,
         methods: ['GET', 'POST'],
         credentials: true
     }
