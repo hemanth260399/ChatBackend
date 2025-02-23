@@ -20,7 +20,7 @@ LoginServer.post("/", async (req, res) => {
             await newuser.save()
             res.status(200).json({ data: newuser, token: token, msg: "Login Successful" })
         } catch (err) {
-            res.status(400).json({ msg: "Something Went Wrong" })
+            res.status(400).json({ msg: "Something Went  Wrong" })
         }
     }
 })
