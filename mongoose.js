@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config()
-let dbname = "CAPSTONE"
+let dbname = "ChatApp"
 let dburl = `mongodb+srv://${process.env.user}:${process.env.password}@${process.env.cluster_name}/${dbname}?retryWrites=true&w=majority&appName=Cluster0`
 export let dbconnection = async () => {
     try {
